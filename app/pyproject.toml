@@ -1,0 +1,5 @@
+[tool.black]
+line-length = 79
+# avoid converting single quote to double quote
+skip-string-normalization = true
+target-version = ['py310']

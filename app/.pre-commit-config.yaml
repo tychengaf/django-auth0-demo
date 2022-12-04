@@ -1,0 +1,47 @@
+exclude: >
+  (?x)(
+    /migrations/|
+    config/|
+    manage.py
+  )
+
+default_language_version:
+  python: python3.10
+
+repos:
+  # code formatter
+- repo: https://github.com/psf/black
+  rev: 22.3.0
+  hooks:
+  - id: black
+
+- repo: https://github.com/asottile/add-trailing-comma
+  rev: v2.2.1
+  hooks:
+  - id: add-trailing-comma
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.1.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+
+- repo: https://github.com/asottile/reorder_python_imports
+  rev: v3.8.2
+  hooks:
+  - id: reorder-python-imports
+
+- repo: https://gitlab.com/pycqa/flake8
+  rev: 4.0.1
+  hooks:
+  - id: flake8
+    additional_dependencies: [flake8-bugbear]
+
+- repo: local
+  hooks:
+  - id: migrations-check
+    language: system
+    name: Check for uncreated migrations.
+    entry: bash -c "./manage.py makemigrations --check --dry-run"
+    types: ["python"]
+    pass_filenames: false

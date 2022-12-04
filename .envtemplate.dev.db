@@ -1,0 +1,3 @@
+POSTGRES_USER=django_template
+POSTGRES_PASSWORD=django_template
+POSTGRES_DB=django_template_dev
