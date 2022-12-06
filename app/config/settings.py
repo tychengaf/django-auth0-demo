@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'corsheaders',
     'auth0',
 ]
 
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -133,3 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # auth0
 AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
 AUTH0_AUDIENCE = os.environ.get('AUTH0_AUDIENCE')
+
+# corsheaders
+CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:3000').split(' ')
+CORS_ALLOW_METHODS = os.environ.get('CORS_ALLOW_METHODS', 'DELETE GET OPTIONS PATCH POST PUT').split(' ')
