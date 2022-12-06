@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'auth0',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# auth0
+AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
+AUTH0_AUDIENCE = os.environ.get('AUTH0_AUDIENCE')
