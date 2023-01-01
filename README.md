@@ -1,5 +1,5 @@
 # django-auth0-demo
-A test project of Auth0 integration on django w/ django-ninja
+A test project of [Auth0 integration on django](https://auth0.com/docs/quickstart/webapp/django/interactive) w/ django-ninja
 
 ## Setup
 
