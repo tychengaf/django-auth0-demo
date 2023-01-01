@@ -14,7 +14,7 @@ A test project of Auth0 integration on django w/ django-ninja
   brew install postgresql
   brew install python@3.10
   ```
-3. Follow the [direnv install guide](https://direnv.net/docs/installation.html), particularly, to [hook direnv to your shell](https://direnv.net/docs/hook.html)
+3. Follow the [direnv install guide](https://direnv.net/docs/installation.html) to [hook direnv to your shell](https://direnv.net/docs/hook.html)
 
 4. Add `<PROJECT_ROOT_DIR>/app/.envrc`
 
