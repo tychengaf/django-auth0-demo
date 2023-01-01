@@ -3,36 +3,41 @@ A test project of Auth0 integration on django w/ django-ninja
 
 ## Setup
 
-### Local direnv setup
-Install dependencies
-```sh
-brew install direnv
-brew install pipenv
-brew install postgresql
-brew install python@3.10
-```
+### Local direnv setup (Mac)
 
-Add `<PROJECT_ROOT_DIR>/app/.envrc`
+1. Install [Homebrew](https://brew.sh/)
 
-```
-layout python <PYTHON_DIR>
-dotenv <PROJECT_ROOT_DIR>/.env.local
-```
+2. Install dependencies
+  ```sh
+  brew install direnv
+  brew install pipenv
+  brew install postgresql
+  brew install python@3.10
+  ```
 
-```sh
-cd <PROJECT_ROOT_DIR>/app
-direnv allow .
-source .direnv/python-<PYTHON_VERSION>/bin/activate
-pipenv install --dev
-```
+3. Add `<PROJECT_ROOT_DIR>/app/.envrc`
+
+  ```
+  layout python <PYTHON_DIR>
+  dotenv <PROJECT_ROOT_DIR>/.env.local
+  ```
+
+4. Activate virtual env and install python dependencies
+  ```sh
+  cd <PROJECT_ROOT_DIR>/app
+  direnv allow .
+  source .direnv/python-<PYTHON_VERSION>/bin/activate
+  pipenv install --dev
+  ```
 
 
 ### Local Docker setup
-install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-build and run containers
-```sh
-cd <PROJECT_ROOT_DIR>
-docker-compose build
-docker-compose up -d
-```
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+2. Build and run containers
+  ```sh
+  cd <PROJECT_ROOT_DIR>
+  docker-compose build
+  docker-compose up -d
+  ```
